@@ -1,5 +1,5 @@
 import {VideoModel} from "../models";
-import moment = require("moment");
+import moment, * as moments from 'moment';
 
 const videoList: VideoModel[] = [
     {
