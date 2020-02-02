@@ -11,13 +11,19 @@ interface Props {
     video?: VideoModel
 }
 
-export const HomeScreen = ({video}: Props) => {
+const useVideos = () => {
     const [videos, setVideo] = useState(null);
 
     useEffect(() => {
         const videos = videoService.videos();
         setVideo(videos);
     });
+
+    return videos;
+};
+
+export const HomeScreen = ({video}: Props) => {
+    const videos = useVideos();
 
     return (
         <View style={StyleSheet.absoluteFill}>
