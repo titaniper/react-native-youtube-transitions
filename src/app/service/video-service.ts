@@ -33,6 +33,17 @@ const videoList: VideoModel[] = [
         viewCnt: 1,
         timestamp: moment(new Date()).toISOString(),
     },
+    {
+        id: 4,
+        title: '포르쉐 박스터 한번 타봅시다',
+        videoURL: require('../../assets/videos/porsche.mp4'),
+        author: '포르쉐 코리아',
+        thumbnail: require('../../assets/thumbnails/porsche.jpg'),
+        viewCnt: 14448784112,
+        timestamp: moment(new Date())
+            .add(-10, 'days')
+            .toISOString(),
+    },
 ];
 
 export const videoService = {
