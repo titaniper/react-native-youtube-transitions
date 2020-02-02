@@ -12,9 +12,6 @@ export const VideoList = ({ videos, onClick }: Props) => {
     const handelVideoClick = (item: VideoModel) => () => {
         onClick(item);
     };
-    if (videos) {
-        console.log(`length: ${videos.length}`);
-    }
 
     return <View style={{flex:1}}>
         <FlatList data={videos} renderItem={({ item }) => <VideoItem video={item} onClick={handelVideoClick(item)} />} />
